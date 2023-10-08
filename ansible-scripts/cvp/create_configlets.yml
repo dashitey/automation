@@ -1,0 +1,18 @@
+---
+- name: Create Configlet
+  hosts: CVP
+  connection: local
+  gather_facts: no
+  vars:
+    path: "{{lookup('env','PWD')}}"
+    configlet_list:
+      leaf1-comment: "! This switch is configured to use ansible\n!"
+      leaf1-motd: "{{ lookup('file', '{{path}}/cvp/config/leaf1-motd.cfg') }}"
+  tasks:
+    - name: Create configlets on CVP 
+      tags:
+        - provision
+      arista.cvp.cv_configlet_v3:
+        configlets: "{{configlet_list}}"
+        configlets_notes: "Configlet managed by Ansible"
+      register: cvp_configlet

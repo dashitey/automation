@@ -1,0 +1,11 @@
+---
+  - hosts: leaf1
+    gather_facts: 'no'
+    tasks:
+    - name: Configure lo99
+      arista.eos.eos_l3_interfaces:
+        config:
+          - name: loopback99   
+            ipv4:
+              
+        state: present

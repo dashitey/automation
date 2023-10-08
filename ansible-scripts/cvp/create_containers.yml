@@ -1,0 +1,32 @@
+---
+- name: Create Containers
+  hosts: CVP
+  connection: local
+  vars:
+    verbose: False
+    containers:
+      Left:
+        parentContainerName: DC1
+
+      Right:
+        parentContainerName: DC1
+
+    path: "{{lookup('env','PWD')}}"
+
+  vars_files: 
+    - ./vars/CVP_model.yml
+
+  tasks:
+    - name: 'Create DC1 container'
+      arista.cvp.cv_container_v3:
+        topology: "{{ cvp_containers }}"
+        state: absent
+
+#  tasks:
+#    - name: 'Create Left and Right containers in DC1 container'
+#      arista.cvp.cv_container_v3:
+#        topology: "{{ containers }}"
+#        state: absent
+
+
+

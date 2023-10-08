@@ -1,0 +1,14 @@
+---
+- name: Apply leaf1-interface Configlets
+  hosts: CVP
+  connection: local
+  vars: 
+    path: "{{lookup('env','PWD')}}"
+  vars_files: 
+    - ../vars/CVP_model.yml
+  tasks:
+    - name: Apply configlets
+      arista.cvp.cv_device_v3:
+        devices: "{{ cvp_devices }}"
+        state: present
+#       apply_mode: strict
