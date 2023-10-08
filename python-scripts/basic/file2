@@ -1,0 +1,7 @@
+mycars:
+    MB: {model: GLS450, color: white}
+    Toyota: {model: Camry, color: ash}
+    Nissan: [First:{model: Rogue, color: black}, Second:{model: Sentra, color: blue}]
+
+
+

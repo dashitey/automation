@@ -1,0 +1,61 @@
+#================================================
+# Example-1: Reading text file converting to JSON 
+#================================================
+# Input file: 
+#      file1.text
+
+# Output file
+# Json filename: file1.json
+
+
+import json
+
+with open('file1', 'r') as f:
+       datafile = (f.read()) 
+
+with open('file1.json', 'w') as outfile:
+    json.dump(datafile, outfile)
+
+
+#================================================
+# Example-2: Reading text file converting to YAML 
+#================================================
+# Input file: 
+#      file2.text
+
+# Output file
+# Yaml filename: file2.yml
+
+
+import yaml
+
+with open('file2', 'r') as s:
+        datafile = yaml.safe_load(s) 
+
+
+with open('file2.yml', 'w') as outfile:
+    yaml.dump(datafile, outfile)
+
+
+
+
+
+#=====================================================
+# Example-3: Reading JSON file converting to text file 
+#=====================================================
+# Input file: 
+#      device.json
+
+# Output file
+# Text filename: device.text
+
+
+import json
+
+with open('device.json', 'r') as y:
+        datafile = json.load(y)
+
+
+with open('device.text', 'w') as d:
+        print(datafile, file=d)
+
