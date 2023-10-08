@@ -1,0 +1,7 @@
+import time
+from cvprac.cvp_client import CvpClient
+clnt = CvpClient()
+clnt.connect(['192.168.0.5'], 'arista', 'arista4pud', cert=False)
+parent = clnt.api.search_topology('Tenant')
+child = clnt.api.search_topology('TORs')
+result = clnt.api.delete_container('TORs', child['containerList'][0]['key'], 'Tenant', parent['containerList'][0]['key'])
