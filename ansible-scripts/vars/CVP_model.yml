@@ -1,7 +1,7 @@
 path: "{{lookup('env','PWD')}}" 
 
 cvp_configlets:
-   leaf1-interface: "{{ lookup('file','{{path}}/cvp/config/leaf1-interfaces.cfg') }}"  
+   00-leaf1-interface: "{{ lookup('file','{{path}}/cvp/config/00-leaf1-interfaces.cfg') }}"  
 
   
 

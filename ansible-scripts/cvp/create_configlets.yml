@@ -6,8 +6,8 @@
   vars:
     path: "{{lookup('env','PWD')}}"
     configlet_list:
-      leaf1-comment: "! This switch is configured to use ansible\n!"
-      leaf1-motd: "{{ lookup('file', '{{path}}/cvp/config/leaf1-motd.cfg') }}"
+      00-leaf1-comment: "! This switch is configured to use ansible\n!"
+      00-leaf1-motd: "{{ lookup('file', '{{path}}/cvp/config/00-leaf1-motd.cfg') }}"
   tasks:
     - name: Create configlets on CVP 
       tags:
