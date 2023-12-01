@@ -1,0 +1,21 @@
+---
+- name: Delete Configlet
+  hosts: CVP
+  connection: local
+  gather_facts: no
+  vars:
+    path: "{{lookup('env','PWD')}}"
+    configlet_list:
+      00-leaf1-comment: ' '
+      00-leaf1-motd: " "
+      00-leaf1-interface: " " 
+  tasks:
+    - name: Delete configlets on CVP 
+      tags:
+        - provision
+      arista.cvp.cv_configlet_v3:
+        configlets: "{{configlet_list}}"
+        configlets_notes: "Configlet managed by Ansible"
+        state: absent
+
+      register: cvp_configlet
