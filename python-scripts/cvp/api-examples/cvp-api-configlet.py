@@ -17,8 +17,7 @@ headers = {
 loginURL = "/cvpservice/configlet/addConfiglet.do"
 authenticateData = json.dumps({"config": "sample configlet4",  "name": "test3"})
 response = requests.post(url+loginURL, data=authenticateData,headers=headers,verify=False)
-#assert response.ok
-#cookies = response.cookies
+
 output = response.json()
 
 print (output)
