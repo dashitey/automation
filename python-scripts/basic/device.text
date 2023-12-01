@@ -1,1 +1,0 @@
-{'switch_id': 2121342, 'switchname': 'eos-201', 'isModular': True, 'modules': {'slot1': {'name': 'DCS-7800-SUP', 'type': 'Supervisor', 'interfaces': ['ma1']}, 'slot2': {'name': '7800R3-36P', 'type': 'Line Card', 'interfaces': ['eth1/0', 'eth1/1', 'eth1/2', 'eth1/3', 'eth1/4']}}}

@@ -1,0 +1,240 @@
+==============================================================================
+List – comma separated elements in [ ]
+
+
+bash_prompt>python3
+>>>
+
+>>> colors=['Orange', 'Yellow', 'Green', 'Red', 'Pink', 'Black']
+
+>>> type(colors)
+<class 'list'>
+
+>>> len(colors)
+6
+
+>>> colors[0]
+'Orange'
+
+>>> colors[2:5]
+['Green', 'Red', 'Pink']
+
+>>> sorted(colors)
+['Black', 'Green', 'Orange', 'Pink', 'Red', 'Yellow']
+
+>>> colors[1]='Blue' 
+
+>>> colors
+['Orange', 'Blue', 'Green', 'Red', 'Pink', 'Black']    
+
+=============================================================================
+
+Tuple – comma separated elements in ( )
+
+>>> kitchenitems=('Blender', 'Stove', 'Refrigirator', 'Oven', 'Cookware', 'Cutlery')'
+
+>>> type(kitchenitems)
+<class 'tuple'>'
+
+>>> len(kitchenitems)
+6
+
+>>> kitchenitems[0]
+'Blender' 
+
+>>> kitchenitems[2:5]
+('Refrigirator', 'Oven', 'Cookware')'
+
+>>> sorted(kitchenitems)
+['Blender', 'Cookware', 'Cutlery', 'Oven', 'Refrigirator', 'Stove']'
+
+>>> kitchenitems[1]='Saucepan' '
+TypeError: 'tuple' object does not support item assignment     immutable
+
+>>> x=list(kitchenitems)
+
+>>> type(x)
+<class 'list'>
+
+>>>x
+['Blender', 'Stove', 'Refrigirator', 'Oven', 'Cookware', 'Cutlery']
+
+==============================================================================
+Set – comma separated elements in { }
+
+
+>>> footballers={"Messi", "Gundogan", "Rudiger", "Haaland", "Mbappe", "Onana"}
+
+>>> type(footballers)
+<class 'set'> 
+
+>>> len(footballers)
+6
+
+>>> footballers[0]
+TypeError: 'set' object is not subscriptable 
+
+>>> print("Messi" in footballers)
+True 
+
+>>> sorted(footballers)
+['Gundogan', 'Haaland', 'Mbappe', 'Messi', 'Onana', 'Rudiger’]
+
+>>> footballers[4]="Rice"
+TypeError: 'set' object does not support item assignment     immutable
+
+>>> y=list(footballers)
+
+>>> type(y)
+<class 'list'>
+
+>>> y
+['Gundogan', 'Haaland', 'Onana', 'Mbappe', 'Messi', 'Rudiger']'
+
+
+====================================================================================
+Dict – comma sepatared key value pairs in  { }
+
+>>> device = {"hostname":"leaf1", "mac":"00505605ada7", "type":"veos"}
+
+>>> type(device)
+<class 'dict'>
+
+>>> len(device)
+3
+
+>>> device[0]
+KeyError: 0
+
+>>> device["mac"]
+'00505605ada7' 
+
+>>> sorted(device)
+['hostname', 'mac', 'type']
+
+>>> device["mac"]="005056d87f93"
+
+>>> device
+{'hostname': 'leaf1', 'mac': '005056d87f93', 'type': 'veos'}
+
+>>> y=list(device)
+
+>>> type(y)
+<class 'list'>
+>>>y
+['hostname', 'mac', 'type']
+
+===========================================================================================
+Cpmutation
+
+Operators
+>>>10+10
+20
+
+>>>100-40
+60
+
+>>>10*2
+5
+
+>>>30/3
+10
+
+>>> 5%2
+1
+
+>>> 2**5
+32
+
+
+Boolean operation 
+>>> 4<=2
+False
+
+>>> 10>8
+True
+
+
+==========================================================================================
+
+Conditional/Loop Statement
+
+>>>exit()
+bash_prompt> cd automation/python-script/basic
+
+1. Review the following python scripts
+     script1.py
+     script2.py
+
+2. Run the scripts
+
+>python3 script1.py
+verify the results
+
+>python3 script2.py
+verify the results
+
+
+===========================================================================================
+
+Reading text file converting to JSON 
+
+1. Review the  python script
+     example1.py
+
+2. review the input text file
+     file1.txt
+
+3. Run the script example1.py
+
+4. verify that the json file file1.json is created and check the results
+
+
+
+==============================================================================================
+
+Reading text file converting to YAML  
+
+1. Review the  python script
+     example2.py
+
+2. review the input text file
+     file2.txt
+
+3. Run the script example2.py
+
+4. verify that the yaml file file2.yml is created and check the results
+
+===========================================================================================
+
+Reading JSON file converting to text file 
+
+1. Review the  python script
+     example3.py
+
+2. review the input json file
+     device.json
+
+3. Run the script example3.py
+
+4. verify that the text file device.text is created and check the results
+
+
+============================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
