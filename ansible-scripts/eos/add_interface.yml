@@ -7,5 +7,6 @@
         config:
           - name: loopback99   
             ipv4:
+            - address: 198.51.100.14/24
               
-        state: present
+        state: merged
