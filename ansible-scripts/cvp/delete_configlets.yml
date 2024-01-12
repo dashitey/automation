@@ -8,7 +8,7 @@
     configlet_list:
       00-leaf1-comment: ' '
       00-leaf1-motd: " "
-      00-leaf1-interface: " " 
+#      00-leaf1-interface: " " 
   tasks:
     - name: Delete configlets on CVP 
       tags:

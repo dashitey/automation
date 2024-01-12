@@ -6,7 +6,7 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 CVP_HOST = "192.168.0.5"
 CVP_USER = "arista"
-CVP_PASS = "aristar3r0"
+CVP_PASS = "arista4i84"
 
 url= "https://%s"%CVP_HOST
 headers = { 'Content-Type': 'application/json' }

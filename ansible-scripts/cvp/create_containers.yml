@@ -14,7 +14,7 @@
     path: "{{lookup('env','PWD')}}"
 
   vars_files: 
-    - ./vars/CVP_model.yml
+    - ../vars/CVP_model.yml
 
   tasks:
     - name: 'Create DC1 container'

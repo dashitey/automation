@@ -1,0 +1,14 @@
+Steps to setup an api call
+1. Setup an api sandbox
+2. Obtain api-key info (name,id and value) from launchpad Admin
+2. Use postman to make a session call with cv cue. 
+   in body:
+    {
+        "type": "apikeycredentials",
+        "keyId": "key-id",
+        "keyValue": "value",
+        "timeout": 3600
+    }
+3. After successful session call look into HEADER tab click "go to cookies" and copy the JSESSIONID cookies
+4. Set as cookie header in python http request for all future API requests to the cv-cue.
+5. when cookie expires make another session call and use new cookie in python http request header
