@@ -14,7 +14,7 @@ headers = {
     'cookie': 'JSESSIONID=F9A7BDF5E3A7134F6FC22DED86EE22DB'
         }
 
-api = "locations"
+api = "clients"
 payload = ''
 response = requests.get(url+api, headers=headers,verify=False)
 
